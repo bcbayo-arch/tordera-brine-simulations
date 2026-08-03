@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tordera brine plume - numerical simulations</title>
+<style>
+ body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;margin:0;background:#f6f8fa;color:#1c2733}
+ header{background:#0b3d5c;color:#fff;padding:28px 6vw}
+ header h1{margin:0 0 6px;font-size:1.5em} header p{margin:4px 0;color:#cfe3f0;max-width:72em}
+ main{padding:10px 6vw 60px}
+ section{margin-top:34px} h2{color:#0b3d5c;border-bottom:2px solid #0b3d5c33;padding-bottom:6px}
+ .desc{max-width:72em;color:#3d4c59}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+ .card{background:#fff;border-radius:10px;box-shadow:0 1px 4px #0002;padding:10px}
+ .card video,.card img{width:100%;border-radius:6px;display:block;background:#000}
+ .card img{background:#fff}
+ .card h3{font-size:1.0em;margin:8px 2px 2px} .card p{font-size:.85em;color:#5a6b7a;margin:2px}
+ .intro{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start;margin-top:22px}
+ .intro img{max-width:380px;width:100%;border-radius:8px;box-shadow:0 1px 4px #0002}
+ .intro div{flex:1;min-width:280px}
+ table{border-collapse:collapse;font-size:.9em} td,th{border:1px solid #c8d4dd;padding:5px 9px}
+ th{background:#e8eef3} footer{color:#5a6b7a;font-size:.85em;padding:20px 6vw;border-top:1px solid #dde5eb}
+</style></head><body>
+<header><h1>Brine plume of the Tordera desalination outfall - numerical simulations</h1>
+<p>High-resolution MITgcm simulations of the brine discharge, in two complementary configurations:
+a <strong>realistic nested model</strong> of the outfall area (~75 m horizontal resolution, 107 vertical
+levels, real bathymetry, boundary currents from the regional CATSEA model and hourly ERA5 wind,
+reference year 2022) and an <strong>idealised slope model</strong> that isolates the role of the wind.
+Every experiment compares two twin simulations, with and without the discharge, so what is shown is
+exactly the effect of the brine (S = 60 psu, 24.4 hm&sup3;/yr, diffuser at 21.5 m; the brine enters at
+the temperature of the receiving water, so the anomaly is purely haline).</p>
+<p>ICM-CSIC &middot; Elisa Berdalet, Bru Cab&uacute;s, Xavier Garcia, Savitri Galiana Blanch, Joaquim Ballabrera Poy &middot; August 2026</p></header>
+<main>
+<div class="intro"><img src="media/bathymetry.png" alt="Model bathymetry">
+<div><h2 style="margin-top:0">The four simulated windows</h2>
+<table><tr><th>Window (2022)</th><th>Discharge</th></tr>
+<tr><td>1-15 April</td><td>8-15 April</td></tr>
+<tr><td>16-30 April</td><td>23-30 April</td></tr>
+<tr><td>1-15 July</td><td>8-14 July</td></tr>
+<tr><td>16-30 July</td><td>23-30 July</td></tr></table>
+<p class="desc">In short: the brine always sinks from the diffuser and travels along the seabed.
+In April it drains down the slope to 90-140 m and dilutes quickly; in July it stays confined between
+20 and 30 m close to the coast, the least dispersive case. The anomaly descends further in April than
+in July because in July a thermocline slows the descent of the brine plume and confines it to the
+upper layer.</p></div></div>
+<section><h2>The plume in 3D (real bathymetry)</h2><p class="desc">Three-dimensional surfaces of the salinity excess over the real seabed of the outfall area. Each video covers the days of discharge, hour by hour. The star is the diffuser, the red line is the coastline.</p><div class="grid"><div class="card"><video controls preload="none" poster="posters/Apr08-15_TORDERA98CnoT_anomaly3D_dS.jpg"><source src="media/Apr08-15_TORDERA98CnoT_anomaly3D_dS.mp4" type="video/mp4"></video><h3>3D plume - 1-15 April 2022</h3><p>injection 8-15 April</p></div>
+<div class="card"><video controls preload="none" poster="posters/Apr23-30_TORDERA98DnoT_anomaly3D_dS.jpg"><source src="media/Apr23-30_TORDERA98DnoT_anomaly3D_dS.mp4" type="video/mp4"></video><h3>3D plume - 16-30 April 2022</h3><p>injection 23-30 April</p></div>
+<div class="card"><video controls preload="none" poster="posters/Jul08-14_TORDERA98E1noT_anomaly3D_dS.jpg"><source src="media/Jul08-14_TORDERA98E1noT_anomaly3D_dS.mp4" type="video/mp4"></video><h3>3D plume - 1-15 July 2022</h3><p>injection 8-14 July</p></div>
+<div class="card"><video controls preload="none" poster="posters/Jul23-30_TORDERA98E2noT_anomaly3D_dS.jpg"><source src="media/Jul23-30_TORDERA98E2noT_anomaly3D_dS.mp4" type="video/mp4"></video><h3>3D plume - 16-30 July 2022</h3><p>injection 23-30 July</p></div>
+<div class="card"><video controls preload="none" poster="posters/Apr08-15_TORDERA98CnoT_anomaly3D_dS_rot90ccw.jpg"><source src="media/Apr08-15_TORDERA98CnoT_anomaly3D_dS_rot90ccw.mp4" type="video/mp4"></video><h3>3D plume, rotated view - 1-15 April 2022</h3><p>injection 8-15 April</p></div>
+<div class="card"><video controls preload="none" poster="posters/Apr23-30_TORDERA98DnoT_anomaly3D_dS_rot90ccw.jpg"><source src="media/Apr23-30_TORDERA98DnoT_anomaly3D_dS_rot90ccw.mp4" type="video/mp4"></video><h3>3D plume, rotated view - 16-30 April 2022</h3><p>injection 23-30 April</p></div>
+<div class="card"><video controls preload="none" poster="posters/Jul08-14_TORDERA98E1noT_anomaly3D_dS_rot90ccw.jpg"><source src="media/Jul08-14_TORDERA98E1noT_anomaly3D_dS_rot90ccw.mp4" type="video/mp4"></video><h3>3D plume, rotated view - 1-15 July 2022</h3><p>injection 8-14 July</p></div>
+<div class="card"><video controls preload="none" poster="posters/Jul23-30_TORDERA98E2noT_anomaly3D_dS_rot90ccw.jpg"><source src="media/Jul23-30_TORDERA98E2noT_anomaly3D_dS_rot90ccw.mp4" type="video/mp4"></video><h3>3D plume, rotated view - 16-30 July 2022</h3><p>injection 23-30 July</p></div></div></section>
+<section><h2>Plume and local currents</h2><p class="desc">Left: the plume in 3D from two cameras. Right: the model currents at six depths with the plume outline (cyan) drawn on top - the direct link between the currents and how far the brine spreads.</p><div class="grid"><div class="card"><video controls preload="none" poster="posters/Apr08-15_TORDERA98CnoT_anomaly3D_currents.jpg"><source src="media/Apr08-15_TORDERA98CnoT_anomaly3D_currents.mp4" type="video/mp4"></video><h3>Plume vs currents - 1-15 April 2022</h3><p>injection 8-15 April</p></div>
+<div class="card"><video controls preload="none" poster="posters/Apr23-30_TORDERA98DnoT_anomaly3D_currents.jpg"><source src="media/Apr23-30_TORDERA98DnoT_anomaly3D_currents.mp4" type="video/mp4"></video><h3>Plume vs currents - 16-30 April 2022</h3><p>injection 23-30 April</p></div>
+<div class="card"><video controls preload="none" poster="posters/Jul08-14_TORDERA98E1noT_anomaly3D_currents.jpg"><source src="media/Jul08-14_TORDERA98E1noT_anomaly3D_currents.mp4" type="video/mp4"></video><h3>Plume vs currents - 1-15 July 2022</h3><p>injection 8-14 July</p></div>
+<div class="card"><video controls preload="none" poster="posters/Jul23-30_TORDERA98E2noT_anomaly3D_currents.jpg"><source src="media/Jul23-30_TORDERA98E2noT_anomaly3D_currents.mp4" type="video/mp4"></video><h3>Plume vs currents - 16-30 July 2022</h3><p>injection 23-30 July</p></div></div></section>
+<section><h2>Depth-by-depth maps of the salinity excess</h2><p class="desc">Salinity excess by depth level (psu above ambient). Values below 0.001 psu are drawn white, i.e. &quot;no real anomaly&quot;. The top of the colour bar is the true maximum of each week.</p><div class="grid"><div class="card"><video controls preload="none" poster="posters/Apr08-15_TORDERA98CnoT_anomaly_dS_every15m_cap0.001psu.jpg"><source src="media/Apr08-15_TORDERA98CnoT_anomaly_dS_every15m_cap0.001psu.mp4" type="video/mp4"></video><h3>Depth maps - 1-15 April 2022</h3><p>injection 8-15 April</p></div>
+<div class="card"><video controls preload="none" poster="posters/Apr23-30_TORDERA98DnoT_anomaly_dS_every15m_cap0.001psu.jpg"><source src="media/Apr23-30_TORDERA98DnoT_anomaly_dS_every15m_cap0.001psu.mp4" type="video/mp4"></video><h3>Depth maps - 16-30 April 2022</h3><p>injection 23-30 April</p></div>
+<div class="card"><video controls preload="none" poster="posters/Jul08-14_TORDERA98E1noT_anomaly_dS_every15m_cap0.001psu.jpg"><source src="media/Jul08-14_TORDERA98E1noT_anomaly_dS_every15m_cap0.001psu.mp4" type="video/mp4"></video><h3>Depth maps - 1-15 July 2022</h3><p>injection 8-14 July</p></div>
+<div class="card"><video controls preload="none" poster="posters/Jul23-30_TORDERA98E2noT_anomaly_dS_every15m_cap0.001psu.jpg"><source src="media/Jul23-30_TORDERA98E2noT_anomaly_dS_every15m_cap0.001psu.mp4" type="video/mp4"></video><h3>Depth maps - 16-30 July 2022</h3><p>injection 23-30 July</p></div></div></section>
+<section><h2>Idealised slope: the plume in 3D</h2><p class="desc">The same discharge on an idealised straight shelf slope, which isolates the effect of the wind from the complexity of the real bathymetry. Same construction as above: salinity-excess surfaces over the seabed, star = diffuser, red = shoreline.</p><div class="grid"><div class="card"><video controls preload="none" poster="posters/slope_plume3D_modal.jpg"><source src="media/slope_plume3D_modal.mp4" type="video/mp4"></video><h3>3D plume - modal wind (1 m s-1)</h3><p>the most frequent regime</p></div>
+<div class="card"><video controls preload="none" poster="posters/slope_plume3D_extreme.jpg"><source src="media/slope_plume3D_extreme.mp4" type="video/mp4"></video><h3>3D plume - extreme wind (4.8 m s-1)</h3><p>95th-percentile regime</p></div>
+<div class="card"><video controls preload="none" poster="posters/slope_plume3D_modal_rot90ccw.jpg"><source src="media/slope_plume3D_modal_rot90ccw.mp4" type="video/mp4"></video><h3>3D plume, rotated view - modal wind (1 m s-1)</h3><p>the most frequent regime</p></div>
+<div class="card"><video controls preload="none" poster="posters/slope_plume3D_extreme_rot90ccw.jpg"><source src="media/slope_plume3D_extreme_rot90ccw.mp4" type="video/mp4"></video><h3>3D plume, rotated view - extreme wind (4.8 m s-1)</h3><p>95th-percentile regime</p></div></div></section>
+<section><h2>Idealised slope: sections and plan views</h2><p class="desc">Salinity excess on fixed slices through the idealised domain. The vertical sections show the dense layer sliding down the slope; the plan views show how far it travels along the coast.</p><div class="grid"><div class="card"><video controls preload="none" poster="posters/anom_S_XZ_j200.jpg"><source src="media/anom_S_XZ_j200.mp4" type="video/mp4"></video><h3>Vertical section through the diffuser - modal wind (1 m s-1)</h3><p>longitude-depth slice at the outfall row</p></div>
+<div class="card"><video controls preload="none" poster="posters/anom_S_XY_k010.jpg"><source src="media/anom_S_XY_k010.mp4" type="video/mp4"></video><h3>Plan view at the injection depth (~20 m) - modal wind (1 m s-1)</h3><p></p></div>
+<div class="card"><video controls preload="none" poster="posters/anom_S_XY_k025.jpg"><source src="media/anom_S_XY_k025.mp4" type="video/mp4"></video><h3>Plan view at ~43 m - modal wind (1 m s-1)</h3><p>where the descending plume passes</p></div>
+<div class="card"><video controls preload="none" poster="posters/anom_S_XZ_j100.jpg"><source src="media/anom_S_XZ_j100.mp4" type="video/mp4"></video><h3>Vertical section 5 km along-shore - modal wind (1 m s-1)</h3><p>downstream of the diffuser</p></div>
+<div class="card"><video controls preload="none" poster="posters/anom_S_XZ_j200.jpg"><source src="media/anom_S_XZ_j200.mp4" type="video/mp4"></video><h3>Vertical section through the diffuser - extreme wind (4.8 m s-1)</h3><p>longitude-depth slice at the outfall row</p></div>
+<div class="card"><video controls preload="none" poster="posters/anom_S_XY_k010.jpg"><source src="media/anom_S_XY_k010.mp4" type="video/mp4"></video><h3>Plan view at the injection depth (~20 m) - extreme wind (4.8 m s-1)</h3><p></p></div>
+<div class="card"><video controls preload="none" poster="posters/anom_S_XY_k025.jpg"><source src="media/anom_S_XY_k025.mp4" type="video/mp4"></video><h3>Plan view at ~43 m - extreme wind (4.8 m s-1)</h3><p>where the descending plume passes</p></div>
+<div class="card"><video controls preload="none" poster="posters/anom_S_XZ_j100.jpg"><source src="media/anom_S_XZ_j100.mp4" type="video/mp4"></video><h3>Vertical section 5 km along-shore - extreme wind (4.8 m s-1)</h3><p>downstream of the diffuser</p></div></div></section>
+<section><h2>Forcing: wind and currents</h2><p class="desc">What drives the dispersion: ERA5 wind over the area, and the current averaged over the 0-21 m column above the diffuser (oceanographic convention: the direction the water flows towards).</p><div class="grid"><div class="card"><video controls preload="none" poster="posters/Apr01-30_wind_quiver.jpg"><source src="media/Apr01-30_wind_quiver.mp4" type="video/mp4"></video><h3>ERA5 wind - April 2022</h3><p>arrows = direction, colour = speed</p></div>
+<div class="card"><video controls preload="none" poster="posters/Jul01-31_wind_quiver.jpg"><source src="media/Jul01-31_wind_quiver.mp4" type="video/mp4"></video><h3>ERA5 wind - July 2022</h3><p>arrows = direction, colour = speed</p></div>
+<div class="card"><a href="media/Apr08-15_TORDERA98CnoT_current_timeseries_outfall.png"><img loading="lazy" src="media/Apr08-15_TORDERA98CnoT_current_timeseries_outfall.png" alt="Current at the diffuser - 1-15 April 2022"></a><h3>Current at the diffuser - 1-15 April 2022</h3><p>injection 8-15 April</p></div>
+<div class="card"><a href="media/Apr23-30_TORDERA98DnoT_current_timeseries_outfall.png"><img loading="lazy" src="media/Apr23-30_TORDERA98DnoT_current_timeseries_outfall.png" alt="Current at the diffuser - 16-30 April 2022"></a><h3>Current at the diffuser - 16-30 April 2022</h3><p>injection 23-30 April</p></div>
+<div class="card"><a href="media/Jul08-14_TORDERA98E1noT_current_timeseries_outfall.png"><img loading="lazy" src="media/Jul08-14_TORDERA98E1noT_current_timeseries_outfall.png" alt="Current at the diffuser - 1-15 July 2022"></a><h3>Current at the diffuser - 1-15 July 2022</h3><p>injection 8-14 July</p></div>
+<div class="card"><a href="media/Jul23-30_TORDERA98E2noT_current_timeseries_outfall.png"><img loading="lazy" src="media/Jul23-30_TORDERA98E2noT_current_timeseries_outfall.png" alt="Current at the diffuser - 16-30 July 2022"></a><h3>Current at the diffuser - 16-30 July 2022</h3><p>injection 23-30 July</p></div>
+<div class="card"><a href="media/Apr01-30_wind_timeseries.png"><img loading="lazy" src="media/Apr01-30_wind_timeseries.png" alt="Wind time series - April 2022"></a><h3>Wind time series - April 2022</h3><p></p></div>
+<div class="card"><a href="media/Jul01-31_wind_timeseries.png"><img loading="lazy" src="media/Jul01-31_wind_timeseries.png" alt="Wind time series - July 2022"></a><h3>Wind time series - July 2022</h3><p></p></div></div></section>
+</main>
+<footer>Twin-experiment method: each pair of runs is identical except for the discharge, so the
+difference between them is the plume alone. The full archive (controls and sensitivity variants) is
+available on request from ICM-CSIC; every animation is regenerable by script and checksummed.</footer>
+</body></html>
